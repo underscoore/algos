@@ -78,8 +78,7 @@ fn decode_string(s: &str, root: &Box<Node>) -> String {
 }
 
 fn main() {
-    //let msg = "Huffman coding is fun!";
-    let msg = "ajay";
+    let msg = "Huffman coding is fun!";
     let f = frequency(msg);
 
     let mut p: Vec<Box<Node>> = f
@@ -96,7 +95,6 @@ fn main() {
         c.right = Some(b);
         p.push(c);
     }
-    //println!("{:?}", p);
 
     let root = p.pop().unwrap();
     let mut h: HashMap<char, String> = HashMap::new();
